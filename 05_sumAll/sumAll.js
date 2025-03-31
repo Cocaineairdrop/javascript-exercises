@@ -2,6 +2,9 @@ const sumAll = function(start, end) {
     let array = [start, end];
     let x = start;
     let y = end;
+    if (!Number.isInteger(x) || !Number.isInteger(y)) {
+        return "ERROR";
+    }
 
     if (x < y) {
         while (x < (y-1)) {
@@ -17,11 +20,11 @@ const sumAll = function(start, end) {
     
     const sum = eval(array.join('+'));
 
-    if (sum < 0) {
-        return "ERROR";
-    } else {
+    if (sum > 0) {
         return sum;
-    }
+      } else {
+        return "ERROR";
+      }
 };
 
 // Do not edit below this line
