@@ -4,6 +4,8 @@ const sumAll = function(start, end) {
     let y = end;
     if (!Number.isInteger(x) || !Number.isInteger(y)) {
         return "ERROR";
+    } else if (isNaN(x) || isNaN(y)) {
+        return "ERROR";
     }
 
     if (x < y) {
