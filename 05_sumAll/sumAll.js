@@ -14,12 +14,14 @@ const sumAll = function(start, end) {
             y++;
         }
     }
-   
-    const arrayToSum = array;
     
-    const sum = eval(arrayToSum.join('+'));
+    const sum = eval(array.join('+'));
 
-    return sum;
+    if (sum < 0) {
+        return "ERROR";
+    } else {
+        return sum;
+    }
 };
 
 // Do not edit below this line
