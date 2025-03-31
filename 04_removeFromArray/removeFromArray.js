@@ -1,6 +1,10 @@
-const removeFromArray = function(array, args) {
-    return array.filter(x => x !== args);
+const removeFromArray = function(array, ...excluded) {
+    return array.filter(element => !excluded.includes(element));
 };
 
 // Do not edit below this line
 module.exports = removeFromArray;
+
+/*The includes() method of Array instances determines 
+whether an array includes a certain value among its 
+entries, returning true or false as appropriate. */
